@@ -198,7 +198,7 @@
         <div class="container mx-auto px-4 py-3 flex items-center justify-between">
             <div class="flex items-center space-x-2">
                 <div class="flex items-center justify-center">
-                    <img src="艾搜logo.png" alt="艾搜文件智能体" class="w-10 h-10 object-contain">
+                    <img src="picture/艾搜logo.png" alt="艾搜文件智能体" class="w-10 h-10 object-contain">
                 </div>
                 <span class="text-xl font-bold text-primary">艾搜文件智能体</span>
             </div>
@@ -218,8 +218,8 @@
                 <a href="#hero" class="text-gray-700 hover:text-primary py-2 transition-colors">首页</a>
                 <a href="#features" class="text-gray-700 hover:text-primary py-2 transition-colors">功能介绍</a>
                 <a href="#scenarios" class="text-gray-700 hover:text-primary py-2 transition-colors">适用场景</a>
-                <a href="#faq" class="text-gray-700 hover:text-primary py-2 transition-colors">帮助中心</a>
-                <a href="#download" class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors text-center">下载中心</a>
+                <a href="#" class="text-gray-700 hover:text-primary py-2 transition-colors" id="contact-support-mobile">帮助中心</a>
+                <a href="#download-client" class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-primary/90 transition-colors text-center">下载中心</a>
             </div>
         </div>
     </header>
@@ -251,7 +251,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
-                    <a href="#download" class="bg-blue-100 text-primary px-8 py-3 rounded-lg font-medium text-center hover:bg-blue-200 transition-all transform hover:scale-105 pulse-animation text-base">
+                    <a href="#download-client" id="download-client" class="bg-blue-100 text-primary px-8 py-3 rounded-lg font-medium text-center hover:bg-blue-200 transition-all transform hover:scale-105 pulse-animation text-base">
                         立即下载客户端
                     </a>
                     <a href="#features" class="bg-blue-100 text-primary px-8 py-3 rounded-lg font-medium text-center hover:bg-blue-200 transition-all transform hover:scale-105 text-base">
@@ -265,9 +265,28 @@
             </div>
             <div class="md:w-1/2 scale-in">
                 <div class="relative rounded-2xl p-3 shadow-2xl floating-animation border-2 border-transparent bg-clip-padding animate-gradient mt-4">
+                    <!-- 左箭头 -->
+                    <button class="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-white/80 hover:bg-white text-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md z-20 focus:outline-none" id="prev-btn">
+                        <i class="fa fa-chevron-left"></i>
+                    </button>
+                    <!-- 右箭头 -->
+                    <button class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 bg-white/80 hover:bg-white text-primary w-10 h-10 rounded-full flex items-center justify-center shadow-md z-20 focus:outline-none" id="next-btn">
+                        <i class="fa fa-chevron-right"></i>
+                    </button>
                     <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
                         <div class="bg-white h-96 flex items-center justify-center relative p-6">
-                            <div class="w-full h-full bg-[url('首页.png')] bg-cover bg-center rounded-lg shadow-lg"></div>
+                            <!-- 图片容器 -->
+                            <div class="w-full h-full rounded-lg shadow-lg overflow-hidden">
+                                <div id="image-slider" class="w-full h-full transition-all duration-500 ease-in-out" style="background-image: url('picture/首页.png'); background-size: cover; background-position: center;"></div>
+                            </div>
+                            <!-- 图片指示器 -->
+                            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                                <button class="w-2 h-2 rounded-full bg-white opacity-100" data-index="0"></button>
+                                <button class="w-2 h-2 rounded-full bg-white opacity-50" data-index="1"></button>
+                                <button class="w-2 h-2 rounded-full bg-white opacity-50" data-index="2"></button>
+                                <button class="w-2 h-2 rounded-full bg-white opacity-50" data-index="3"></button>
+                                <button class="w-2 h-2 rounded-full bg-white opacity-50" data-index="4"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -346,7 +365,7 @@
             <div class="md:w-3/4 glass rounded-xl p-6 tech-border">
                 <div class="feature-content hidden" id="content1">
                     <h3 class="text-2xl font-semibold mb-4 text-gradient">智能知识库</h3>
-                    <img src="知识库-个人.png" alt="智能知识库" class="rounded-lg w-full h-auto mb-4 tech-border" loading="lazy">
+                    <img src="picture/知识库-个人.png" alt="智能知识库" class="rounded-lg w-full h-auto mb-4 tech-border" loading="lazy">
                     <ul class="list-disc list-inside text-gray-600 space-y-2">
                         <li>自动扫描归档</li>
                         <li>全文检索</li>
@@ -355,7 +374,7 @@
                 </div>
                 <div class="feature-content hidden" id="content2">
                     <h3 class="text-2xl font-semibold mb-4 text-gradient">合同智提醒</h3>
-                    <img src="智提醒.png" alt="合同智提醒" class="rounded-lg w-full h-auto mb-4 tech-border" loading="lazy">
+                    <img src="picture/智提醒.png" alt="合同智提醒" class="rounded-lg w-full h-auto mb-4 tech-border" loading="lazy">
                     <ul class="list-disc list-inside text-gray-600 space-y-2">
                         <li>节点解析</li>
                         <li>多色预警</li>
@@ -364,7 +383,7 @@
                 </div>
                 <div class="feature-content hidden" id="content3">
                     <h3 class="text-2xl font-semibold mb-4 text-gradient">文秘宝</h3>
-                    <img src="文秘宝 47.png" alt="文秘宝" class="rounded-lg w-full h-auto mb-4 tech-border" loading="lazy">
+                    <img src="picture/文秘宝 47.png" alt="文秘宝" class="rounded-lg w-full h-auto mb-4 tech-border" loading="lazy">
                     <ul class="list-disc list-inside text-gray-600 space-y-2">
                         <li>智能文件柜联动</li>
                         <li>纸质档案线上化</li>
@@ -372,7 +391,7 @@
                 </div>
                 <div class="feature-content hidden" id="content4">
                     <h3 class="text-2xl font-semibold mb-4 text-gradient">扫描数字化</h3>
-                    <img src="扫描-单文档.png" alt="扫描数字化" class="rounded-lg w-full h-auto mb-4 tech-border" loading="lazy">
+                    <img src="picture/扫描-单文档.png" alt="扫描数字化" class="rounded-lg w-full h-auto mb-4 tech-border" loading="lazy">
                     <ul class="list-disc list-inside text-gray-600 space-y-2">
                         <li>适配紫光扫描仪</li>
                         <li>自动命名</li>
@@ -381,7 +400,7 @@
                 </div>
                 <div class="feature-content active" id="content5">
                     <h3 class="text-2xl font-semibold mb-4 text-gradient">AI问答</h3>
-                    <img src="首页.png" alt="AI问答" class="rounded-lg w-full h-auto mb-4 tech-border" loading="lazy">
+                    <img src="picture/首页.png" alt="AI问答" class="rounded-lg w-full h-auto mb-4 tech-border" loading="lazy">
                     <ul class="list-disc list-inside text-gray-600 space-y-2">
                         <li>智能问答</li>
                         <li>文件内容提取</li>
@@ -509,8 +528,8 @@
             <div class="flex flex-col md:flex-row justify-between">
                 <div class="mb-8 md:mb-0">
                     <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-lg">
-                            <i class="fa fa-cubes text-white text-xl"></i>
+                        <div class="flex items-center justify-center">
+                            <img src="picture/艾搜logo.png" alt="艾搜文件智能体" class="w-10 h-10 object-contain">
                         </div>
                         <span class="text-xl font-bold">艾搜文件智能体</span>
                     </div>
@@ -520,10 +539,10 @@
                     <h3 class="text-lg font-semibold mb-4">快速链接</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#features" class="hover:text-white transition-colors">产品功能</a></li>
-                        <li><a href="#download" class="hover:text-white transition-colors">下载中心</a></li>
-                        <li><a href="#faq" class="hover:text-white transition-colors">帮助中心</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">用户协议</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">隐私政策</a></li>
+                        <li><a href="#download-client" class="hover:text-white transition-colors">下载中心</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors" id="contact-support-footer">帮助中心</a></li>
+                        <li><a href="user-agreement.html" class="hover:text-white transition-colors" target="_blank">用户协议</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition-colors" target="_blank">隐私政策</a></li>
                     </ul>
                 </div>
                 <div>
@@ -678,6 +697,18 @@
                 document.getElementById('support-modal').classList.remove('hidden');
             });
 
+            // 移动端帮助中心点击事件
+            document.getElementById('contact-support-mobile').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('support-modal').classList.remove('hidden');
+            });
+
+            // 页脚帮助中心点击事件
+            document.getElementById('contact-support-footer').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('support-modal').classList.remove('hidden');
+            });
+
             // 关闭弹窗事件
             document.getElementById('close-modal').addEventListener('click', function() {
                 document.getElementById('support-modal').classList.add('hidden');
@@ -724,6 +755,86 @@
                 }
             });
         }
+    </script>
+    
+    <!-- 图片轮播脚本 -->
+    <script>
+        // 图片路径数组
+        const images = [
+            'picture/首页.png',
+            'picture/知识库-个人.png',
+            'picture/智提醒.png',
+            'picture/文秘宝 47.png',
+            'picture/扫描-单文档.png'
+        ];
+        
+        let currentIndex = 0;
+        let slideInterval;
+        
+        // 等待DOM加载完成
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.getElementById('image-slider');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const indicators = document.querySelectorAll('[data-index]');
+            
+            // 更新图片
+            function updateImage() {
+                slider.style.backgroundImage = `url('${images[currentIndex]}')`;
+                slider.style.opacity = '0';
+                setTimeout(() => {
+                    slider.style.opacity = '1';
+                }, 100);
+                
+                // 更新指示器
+                indicators.forEach((indicator, index) => {
+                    if (index === currentIndex) {
+                        indicator.style.opacity = '1';
+                    } else {
+                        indicator.style.opacity = '0.5';
+                    }
+                });
+            }
+            
+            // 开始自动轮播
+            function startAutoSlide() {
+                slideInterval = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateImage();
+                }, 5000);
+            }
+            
+            // 停止自动轮播
+            function stopAutoSlide() {
+                clearInterval(slideInterval);
+            }
+            
+            // 上一张
+            prevBtn.addEventListener('click', () => {
+                stopAutoSlide();
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateImage();
+            });
+            
+            // 下一张
+            nextBtn.addEventListener('click', () => {
+                stopAutoSlide();
+                currentIndex = (currentIndex + 1) % images.length;
+                updateImage();
+            });
+            
+            // 点击指示器
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    stopAutoSlide();
+                    currentIndex = index;
+                    updateImage();
+                });
+            });
+            
+            // 开始自动轮播
+            startAutoSlide();
+        });
     </script>
     
     <!-- 电话客服弹窗 -->
